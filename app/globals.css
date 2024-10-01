@@ -14,7 +14,10 @@
   }
 }
 
-#app { height: 100% }
+#app {
+  height: 100%
+}
+
 html,
 body {
   position: relative;
@@ -66,49 +69,90 @@ body {
 }
 
 .swiper-slide {
-  display: flex;
-  align-items: center;
+  display: flex;  
   justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide div {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
-  background-size: cover;
+  height: 100%;
   background-position: center center;
   border-radius: 12px;
   overflow: hidden !important;
+  background-size: cover;
+  opacity: 0.7;
+  transition: opacity .5s ease-in-out !important;
 }
 
-.slider-1 {
+.slider-1 div {
   background-image: url("https://images6.alphacoders.com/679/thumb-1920-679459.jpg");
 }
 
-.slider-2 {
+.slider-2 div {
   background-image: url("https://images2.alphacoders.com/631/thumb-1920-631095.jpg");
 }
 
-.slider-3 {
+.slider-3 div {
   background-image: url("https://images4.alphacoders.com/665/thumb-1920-665242.png");
 }
 
-.slider-4 {
+.slider-4 div {
   background-image: url("https://images2.alphacoders.com/738/thumb-1920-738176.png");
 }
 
-.slider-5 {
+.slider-5 div {
   background-image: url("https://images8.alphacoders.com/100/thumb-1920-1005531.jpg");
 }
 
-.slider-6 {
+.slider-6 div {
   background-image: url("https://images2.alphacoders.com/582/thumb-1920-582804.png");
+}
+
+
+.swiper-slide-active div {
+  /* background-size: 100% 100%; */
+  opacity: 1;
+}
+
+.dir-btn {
+  position: absolute;
+  z-index: 100;
+  top: 47%;
+  right: 10px;
+}
+
+.dir-btn svg {
+  fill: white;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 900px) {
   .swiper {
     height: 700px;
-    /* width: 100vw; */
     width: 320px;
   }
+
   .dir-btn {
     display: none !important;
   }
+}
+
+.container {
+  margin-top: 100px;
+}
+
+.main-cont {
+  position: relative;
+  overflow-y: hidden;
+  margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .main-cont {
+    overflow-x: hidden;
+  } 
 }

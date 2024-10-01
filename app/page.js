@@ -38,10 +38,10 @@ export default function Home() {
   };
 
   return (
-    <div className='mt-[100px]'>
-      <div className='relative overflow-x-hidden lg:overflow-y-hidden m-auto'>
+    <div className='container'>
+      <div className='main-cont'>
         <Swiper
-          className={'h-[320px]'}
+          className={''}
           effect={'cards'}
           grabCursor={true}
           modules={[EffectCards, Navigation]}
@@ -66,13 +66,13 @@ export default function Home() {
           loop={true}
           direction={flgDirt}
         >
-          <SwiperSlide className='slider-1 flex justify-center items-center'><div className='h-full'></div></SwiperSlide>
-          <SwiperSlide className='slider-2 flex justify-center items-center'><div className='h-full'></div></SwiperSlide>
-          <SwiperSlide className='slider-3 flex justify-center items-center'><div className='h-full'></div></SwiperSlide>
-          <SwiperSlide className='slider-4 flex justify-center items-center'><div className='h-full'></div></SwiperSlide>
-          <SwiperSlide className='slider-5 flex justify-center items-center'><div className='h-full'></div></SwiperSlide>
-          <SwiperSlide className='slider-6 flex justify-center items-center'><div className='h-full'></div></SwiperSlide>
-          <button className='dir-btn absolute swiper-next z-[100] top-[47%] right-[10px]'><CiCircleChevRight className='fill-white text-[30px] font-bold' /></button>
+          <SwiperSlide className='slider-1 flex'><div /></SwiperSlide>
+          <SwiperSlide className='slider-2 flex'><div /></SwiperSlide>
+          <SwiperSlide className='slider-3 flex'><div /></SwiperSlide>
+          <SwiperSlide className='slider-4 flex'><div /></SwiperSlide>
+          <SwiperSlide className='slider-5 flex'><div /></SwiperSlide>
+          <SwiperSlide className='slider-6 flex'><div /></SwiperSlide>
+          <button className='dir-btn swiper-next'><CiCircleChevRight /></button>
         </Swiper>
       </div>
     </div>
