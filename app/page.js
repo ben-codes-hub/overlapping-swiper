@@ -18,14 +18,18 @@ export default function Home() {
     setTimeout(() => {
       remoteTranslate3D();
       window.addEventListener('resize', handleResize);
-
       if (window.innerWidth <= 900) {
         setFlgDirt("vertical");
+
       } else {
         setFlgDirt("horizontal");
       }
-    }, [100])
+    }, [200])
   }, []);
+
+  useEffect(() => {
+    setFlgDirt(flgDirt)
+  }, [flgDirt])
 
   const handleResize = () => {
     if (window) {
@@ -43,28 +47,54 @@ export default function Home() {
         <Swiper
           className={''}
           effect={'cards'}
-          grabCursor={true}
           modules={[EffectCards, Navigation]}
           navigation={{
             nextEl: ".swiper-next",
             prevEl: ".swiper-prev",
           }}
+          slidesPerGroup={1}
           onSwiper={(_) => {
             remoteTranslate3D();
           }
           }
+          allowTouchMove={false}
+          slideToClickedSlide={true}
           onSlideChange={() => {
             remoteTranslate3D();
           }}
-          spaceBetween={spaceBetween}
-          slidesPerView={3}
+          onTouchStart={(swiper) => {
+            window.innerWidth <= 900 && swiper.slideNext();
+          }}
+          touchRatio={0.2}
           cardsEffect={{
             rotate: false,
             perSlideOffset: 15,
           }}
           allowSlidePrev={false}
           loop={true}
-          direction={flgDirt}
+          direction={"vertical"}
+          slidesPerView={3}
+          spaceBetween={spaceBetween}
+          initialSlide={4}
+          onBreakpoint={(swiper, breakpointParams) => {
+            if (window.innerWidth <= 900) {
+              swiper.slideTo(4);
+            }
+          }}
+          breakpoints={{
+            1286: {
+              slidesPerView: 5,
+              direction: "horizontal",
+              spaceBetween: -985,
+              initialSlide:4
+            },
+            900: {
+              direction: "horizontal",
+              slidesPerView: 4,
+              spaceBetween: -655,
+              initialSlide: 4
+            },
+          }}
         >
           <SwiperSlide className='slider-1 flex'><div /></SwiperSlide>
           <SwiperSlide className='slider-2 flex'><div /></SwiperSlide>

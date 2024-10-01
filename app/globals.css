@@ -55,7 +55,8 @@ body {
 }
 
 .swiper {
-  width: 700px;
+  /* width: 700px; */
+  max-width: 1440px;
   height: 320px;
   overflow: hidden !important;
 }
@@ -142,6 +143,7 @@ body {
 }
 
 .container {
+  margin: auto;
   margin-top: 100px;
 }
 
@@ -149,6 +151,7 @@ body {
   position: relative;
   overflow-y: hidden;
   margin: auto;
+  width: 100%;
 }
 
 @media screen and (max-width: 900px) {
