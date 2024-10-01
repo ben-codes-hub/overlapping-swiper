@@ -57,6 +57,14 @@ body {
   overflow: hidden !important;
 }
 
+@media screen and (max-width: 900px) {
+  .swiper {
+    width: 700px;
+    height: 320px;
+    overflow: visible !important;
+  }
+}
+
 .swiper-slide {
   display: flex;
   align-items: center;
@@ -64,13 +72,10 @@ body {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
-}
-
-.swiper-slide {
-  background-color: lightgray;
-  box-shadow: 1px 1px 1px gray;
   background-size: cover;
   background-position: center center;
+  border-radius: 12px;
+  overflow: hidden !important;
 }
 
 .slider-1 {
