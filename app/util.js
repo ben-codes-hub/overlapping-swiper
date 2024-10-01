@@ -12,6 +12,15 @@ export const remoteTranslate3D = () => {
                 // const nextElement = document.getElementsByClassName("swiper-slide-next")[0];
                 // const siblingElement = nextElement.nextElementSibling;
 
+
+                document.getElementsByClassName("swiper-slide")[0].style.visibility = "hidden";
+                document.getElementsByClassName("swiper-slide")[1].style.visibility = "hidden";
+                document.getElementsByClassName("swiper-slide")[2].style.visibility = "hidden";
+
+                document.getElementsByClassName("swiper-slide")[3].style.visibility = "visible";
+                document.getElementsByClassName("swiper-slide")[4].style.visibility = "visible";
+                document.getElementsByClassName("swiper-slide")[5].style.visibility = "visible";
+
                 const activeElement = document.getElementsByClassName("swiper-slide")[3];
                 const nextElement = document.getElementsByClassName("swiper-slide")[4];
                 const siblingElement = document.getElementsByClassName("swiper-slide")[5];

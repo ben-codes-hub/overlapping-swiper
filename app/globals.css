@@ -59,6 +59,7 @@ body {
   max-width: 1440px;
   height: 320px;
   overflow: hidden !important;
+  border-radius: 12px;
 }
 
 @media screen and (max-width: 900px) {
@@ -73,6 +74,8 @@ body {
   display: flex;  
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .swiper-slide div {

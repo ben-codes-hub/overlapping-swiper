@@ -55,6 +55,10 @@ export default function Home() {
           slidesPerGroup={1}
           onSwiper={(_) => {
             remoteTranslate3D();
+
+            if (window.innerHeight < 900) {
+              _.slideTo(4)
+            }
           }
           }
           allowTouchMove={false}
