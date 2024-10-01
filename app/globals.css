@@ -14,14 +14,96 @@
   }
 }
 
+#app { height: 100% }
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  height: 100%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 700px;
+  height: 320px;
+  overflow: hidden !important;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide {
+  background-color: lightgray;
+  box-shadow: 1px 1px 1px gray;
+  background-size: cover;
+  background-position: center center;
+}
+
+.slider-1 {
+  background-image: url("https://images6.alphacoders.com/679/thumb-1920-679459.jpg");
+}
+
+.slider-2 {
+  background-image: url("https://images2.alphacoders.com/631/thumb-1920-631095.jpg");
+}
+
+.slider-3 {
+  background-image: url("https://images4.alphacoders.com/665/thumb-1920-665242.png");
+}
+
+.slider-4 {
+  background-image: url("https://images2.alphacoders.com/738/thumb-1920-738176.png");
+}
+
+.slider-5 {
+  background-image: url("https://images8.alphacoders.com/100/thumb-1920-1005531.jpg");
+}
+
+.slider-6 {
+  background-image: url("https://images2.alphacoders.com/582/thumb-1920-582804.png");
+}
+
+@media screen and (max-width: 900px) {
+  .swiper {
+    height: 700px;
+    /* width: 100vw; */
+    width: 320px;
+  }
+  .dir-btn {
+    display: none !important;
   }
 }
