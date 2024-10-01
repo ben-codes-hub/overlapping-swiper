@@ -55,7 +55,6 @@ export default function Home() {
           slidesPerGroup={1}
           onSwiper={(_) => {
             remoteTranslate3D();
-
             if (window.innerHeight < 900) {
               _.slideTo(4)
             }
@@ -84,6 +83,7 @@ export default function Home() {
             if (window.innerWidth <= 900) {
               swiper.slideTo(4);
             }
+            remoteTranslate3D()
           }}
           breakpoints={{
             1286: {

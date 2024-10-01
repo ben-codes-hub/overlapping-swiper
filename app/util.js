@@ -11,8 +11,6 @@ export const remoteTranslate3D = () => {
                 // const activeElement = document.getElementsByClassName("swiper-slide-active")[0];
                 // const nextElement = document.getElementsByClassName("swiper-slide-next")[0];
                 // const siblingElement = nextElement.nextElementSibling;
-
-
                 document.getElementsByClassName("swiper-slide")[0].style.visibility = "hidden";
                 document.getElementsByClassName("swiper-slide")[1].style.visibility = "hidden";
                 document.getElementsByClassName("swiper-slide")[2].style.visibility = "hidden";
@@ -38,6 +36,13 @@ export const remoteTranslate3D = () => {
                     'translate3d(40px, -300px, 0)'
                 );
             }, 1)
+        } else {
+            document.getElementsByClassName("swiper-slide")[0].style.visibility = "visible";
+            document.getElementsByClassName("swiper-slide")[1].style.visibility = "visible";
+            document.getElementsByClassName("swiper-slide")[2].style.visibility = "visible";
+            document.getElementsByClassName("swiper-slide")[3].style.visibility = "visible";
+            document.getElementsByClassName("swiper-slide")[4].style.visibility = "visible";
+            document.getElementsByClassName("swiper-slide")[5].style.visibility = "visible";
         }
     }
 }
